@@ -5,8 +5,8 @@
 | 2  | Samsung Galaxy S24    | Smartphone  | Samsung   | Approx. $899  | AMOLED Display, 5G, Triple Camera          |
 | 3  | Sony WH-1000XM5       | Headphones  | Sony      | Approx. $399  | Noise Cancellation, 30hr Battery           |
 | 4  | Dell XPS 13           | Laptop      | Dell      | Approx. $1199 | Intel i7, 16GB RAM, 512GB SSD              |
-| 5  | Apple Watch Series 9  | Smartwatch  | Apple     | Approx. $399  | Fitness Tracking, GPS, Water Resistant   
-| 6  | Apple iPhone 15       | Smartphone  | Apple     | Approx. $799  | A16 Chip, 48MP Camera, USB-C               |
-| 7  | Samsung Galaxy S24    | Smartphone  | Samsung   | Approx. $899  | AMOLED Display, 5G, Triple Camera          |
-| 8  | Sony WH-1000XM5       | Headphones  | Sony      | Approx. $399  | Noise Cancellation, 30hr Battery       
+| 5  | Apple Watch Series 9  | Smartwatch  | Apple     | Approx. $399  | Fitness Tracking, GPS, Water Resistant     |
+| 6  | Lenovo ThinkPad X1    | Laptop      | Lenovo    | Approx. $1399 | Intel Evo, 14-inch Display, Fingerprint    |
+| 7  | Bose QuietComfort 45  | Headphones  | Bose      | Approx. $329  | Active Noise Cancellation, Wireless Audio  |
+| 8  | Google Pixel 8        | Smartphone  | Google    | Approx. $699  | AI Camera, Tensor G3 Chip, Android 14      |
 +----+-----------------------+-------------+-----------+---------------+---------------------------------------------+
