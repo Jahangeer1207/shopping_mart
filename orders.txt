@@ -1,0 +1,9 @@
++---------+----------------------+-----------------------+----------+---------------+--------------+
+| OrderID | Customer Name        | Product Name          | Quantity | Total Price   | Order Status |
++---------+----------------------+-----------------------+----------+---------------+--------------+
+| ORD001  | Rahul Sharma         | Apple iPhone 15       | 1        | $799          | Delivered    |
+| ORD002  | Priya Reddy          | Samsung Galaxy S24    | 2        | $1798         | Shipped      |
+| ORD003  | Arjun Kumar          | Sony WH-1000XM5       | 1        | $399          | Processing   |
+| ORD004  | Sneha Patel          | Dell XPS 13           | 1        | $1199         | Delivered    |
+| ORD005  | Vikram Singh         | Apple Watch Series 9  | 3        | $1197         | Pending      |
++---------+----------------------+-----------------------+----------+---------------+--------------+

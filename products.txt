@@ -1,0 +1,9 @@
++----+-----------------------+-------------+-----------+---------------+---------------------------------------------+
+| No | Product Name          | Category    | Brand     | Price         | Key Features                                |
++----+-----------------------+-------------+-----------+---------------+---------------------------------------------+
+| 1  | Apple iPhone 15       | Smartphone  | Apple     | Approx. $799  | A16 Chip, 48MP Camera, USB-C               |
+| 2  | Samsung Galaxy S24    | Smartphone  | Samsung   | Approx. $899  | AMOLED Display, 5G, Triple Camera          |
+| 3  | Sony WH-1000XM5       | Headphones  | Sony      | Approx. $399  | Noise Cancellation, 30hr Battery           |
+| 4  | Dell XPS 13           | Laptop      | Dell      | Approx. $1199 | Intel i7, 16GB RAM, 512GB SSD              |
+| 5  | Apple Watch Series 9  | Smartwatch  | Apple     | Approx. $399  | Fitness Tracking, GPS, Water Resistant     |
++----+-----------------------+-------------+-----------+---------------+---------------------------------------------+
