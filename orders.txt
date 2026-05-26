@@ -6,5 +6,7 @@
 | ORD003  | Arjun Kumar          | Sony WH-1000XM5       | 1        | $399          | Processing   |
 | ORD004  | Sneha Patel          | Dell XPS 13           | 1        | $1199         | Delivered    |
 | ORD005  | Vikram Singh         | Apple Watch Series 9  | 3        | $1197         | Pending      |
-  |
+  || ORD006  | Neha Gupta           | HP Pavilion Laptop    | 1        | $899          | Shipped      |
+| ORD007  | Karan Mehta          | Bose QuietComfort 45  | 2        | $658          | Delivered    |
+| ORD008  | Ananya Iyer          | iPad Air M2           | 1        | $599          | Processing 
 +---------+----------------------+-----------------------+----------+---------------+--------------+
