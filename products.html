@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product Catalog</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f7fb;
+      padding: 30px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    select {
+      padding: 10px;
+      width: 100%;
+      max-width: 350px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+
+    .product-card {
+      background: #f9fafc;
+      border-left: 5px solid #007bff;
+      padding: 20px;
+      border-radius: 8px;
+      display: none;
+    }
+
+    .product-card h3 {
+      margin-top: 0;
+      color: #007bff;
+    }
+
+    .product-card p {
+      margin: 8px 0;
+      color: #444;
+    }
+
+    .feature {
+      background: #e8f0ff;
+      padding: 6px 10px;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Product Catalog</h2>
+
+    <label for="productSelect">Choose a Product:</label>
+    <select id="productSelect" onchange="showProduct()">
+      <option value="">-- Select Product --</option>
+      <option value="0">Apple iPhone 15</option>
+      <option value="1">Samsung Galaxy S24</option>
+      <option value="2">Sony WH-1000XM5</option>
+      <option value="3">Dell XPS 13</option>
+      <option value="4">Apple Watch Series 9</option>
+      <option value="5">Lenovo ThinkPad X1</option>
+      <option value="6">Bose QuietComfort 45</option>
+      <option value="7">Google Pixel 8</option>
+    </select>
+
+    <div class="product-card" id="productCard">
+      <h3 id="name"></h3>
+      <p><strong>Category:</strong> <span id="category"></span></p>
+      <p><strong>Brand:</strong> <span id="brand"></span></p>
+      <p><strong>Price:</strong> <span id="price"></span></p>
+      <p><strong>Features:</strong></p>
+      <div class="feature" id="features"></div>
+    </div>
+  </div>
+
+  <script>
+    const products = [
+      {
+        name: "Apple iPhone 15",
+        category: "Smartphone",
+        brand: "Apple",
+        price: "Approx. $799",
+        features: "A16 Chip, 48MP Camera, USB-C"
+      },
+      {
+        name: "Samsung Galaxy S24",
+        category: "Smartphone",
+        brand: "Samsung",
+        price: "Approx. $899",
+        features: "AMOLED Display, 5G, Triple Camera"
+      },
+      {
+        name: "Sony WH-1000XM5",
+        category: "Headphones",
+        brand: "Sony",
+        price: "Approx. $399",
+        features: "Noise Cancellation, 30hr Battery"
+      },
+      {
+        name: "Dell XPS 13",
+        category: "Laptop",
+        brand: "Dell",
+        price: "Approx. $1199",
+        features: "Intel i7, 16GB RAM, 512GB SSD"
+      },
+      {
+        name: "Apple Watch Series 9",
+        category: "Smartwatch",
+        brand: "Apple",
+        price: "Approx. $399",
+        features: "Fitness Tracking, GPS, Water Resistant"
+      },
+      {
+        name: "Lenovo ThinkPad X1",
+        category: "Laptop",
+        brand: "Lenovo",
+        price: "Approx. $1399",
+        features: "Intel Evo, 14-inch Display, Fingerprint"
+      },
+      {
+        name: "Bose QuietComfort 45",
+        category: "Headphones",
+        brand: "Bose",
+        price: "Approx. $329",
+        features: "Active Noise Cancellation, Wireless Audio"
+      },
+      {
+        name: "Google Pixel 8",
+        category: "Smartphone",
+        brand: "Google",
+        price: "Approx. $699",
+        features: "AI Camera, Tensor G3 Chip, Android 14"
+      }
+    ];
+
+    function showProduct() {
+      const index = document.getElementById("productSelect").value;
+      const card = document.getElementById("productCard");
+
+      if (index === "") {
+        card.style.display = "none";
+        return;
+      }
+
+      const product = products[index];
+
+      document.getElementById("name").textContent = product.name;
+      document.getElementById("category").textContent = product.category;
+      document.getElementById("brand").textContent = product.brand;
+      document.getElementById("price").textContent = product.price;
+      document.getElementById("features").textContent = product.features;
+
+      card.style.display = "block";
+    }
+  </script>
+
+</body>
+</html>

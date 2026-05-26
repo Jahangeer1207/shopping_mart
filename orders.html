@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Order Management</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #eef2f7;
+      padding: 30px;
+    }
+
+    .container {
+      max-width: 950px;
+      margin: auto;
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    select {
+      width: 100%;
+      max-width: 400px;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .order-card {
+      display: none;
+      background: #f9fbfd;
+      border-left: 6px solid #007bff;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .order-card h3 {
+      margin-top: 0;
+      color: #007bff;
+    }
+
+    .order-card p {
+      margin: 10px 0;
+      color: #444;
+      font-size: 15px;
+    }
+
+    .status {
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 20px;
+      color: white;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .Delivered {
+      background: #28a745;
+    }
+
+    .Shipped {
+      background: #17a2b8;
+    }
+
+    .Processing {
+      background: #ffc107;
+      color: #333;
+    }
+
+    .Pending {
+      background: #dc3545;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Order Management System</h2>
+
+    <label for="orderSelect">Select an Order:</label>
+
+    <select id="orderSelect" onchange="showOrder()">
+      <option value="">-- Choose Order --</option>
+      <option value="0">ORD001 - Rahul Sharma</option>
+      <option value="1">ORD002 - Priya Reddy</option>
+      <option value="2">ORD003 - Arjun Kumar</option>
+      <option value="3">ORD004 - Sneha Patel</option>
+      <option value="4">ORD005 - Vikram Singh</option>
+      <option value="5">ORD006 - Neha Gupta</option>
+      <option value="6">ORD007 - Karan Mehta</option>
+      <option value="7">ORD008 - Ananya Iyer</option>
+    </select>
+
+    <div class="order-card" id="orderCard">
+      <h3 id="orderId"></h3>
+
+      <p><strong>Customer Name:</strong> <span id="customer"></span></p>
+
+      <p><strong>Product Name:</strong> <span id="product"></span></p>
+
+      <p><strong>Quantity:</strong> <span id="quantity"></span></p>
+
+      <p><strong>Total Price:</strong> <span id="price"></span></p>
+
+      <p>
+        <strong>Order Status:</strong>
+        <span class="status" id="status"></span>
+      </p>
+    </div>
+  </div>
+
+  <script>
+    const orders = [
+      {
+        orderId: "ORD001",
+        customer: "Rahul Sharma",
+        product: "Apple iPhone 15",
+        quantity: 1,
+        price: "$799",
+        status: "Delivered"
+      },
+      {
+        orderId: "ORD002",
+        customer: "Priya Reddy",
+        product: "Samsung Galaxy S24",
+        quantity: 2,
+        price: "$1798",
+        status: "Shipped"
+      },
+      {
+        orderId: "ORD003",
+        customer: "Arjun Kumar",
+        product: "Sony WH-1000XM5",
+        quantity: 1,
+        price: "$399",
+        status: "Processing"
+      },
+      {
+        orderId: "ORD004",
+        customer: "Sneha Patel",
+        product: "Dell XPS 13",
+        quantity: 1,
+        price: "$1199",
+        status: "Delivered"
+      },
+      {
+        orderId: "ORD005",
+        customer: "Vikram Singh",
+        product: "Apple Watch Series 9",
+        quantity: 3,
+        price: "$1197",
+        status: "Pending"
+      },
+      {
+        orderId: "ORD006",
+        customer: "Neha Gupta",
+        product: "HP Pavilion Laptop",
+        quantity: 1,
+        price: "$899",
+        status: "Shipped"
+      },
+      {
+        orderId: "ORD007",
+        customer: "Karan Mehta",
+        product: "Bose QuietComfort 45",
+        quantity: 2,
+        price: "$658",
+        status: "Delivered"
+      },
+      {
+        orderId: "ORD008",
+        customer: "Ananya Iyer",
+        product: "iPad Air M2",
+        quantity: 1,
+        price: "$599",
+        status: "Processing"
+      }
+    ];
+
+    function showOrder() {
+      const index = document.getElementById("orderSelect").value;
+      const card = document.getElementById("orderCard");
+
+      if (index === "") {
+        card.style.display = "none";
+        return;
+      }
+
+      const order = orders[index];
+
+      document.getElementById("orderId").textContent = order.orderId;
+      document.getElementById("customer").textContent = order.customer;
+      document.getElementById("product").textContent = order.product;
+      document.getElementById("quantity").textContent = order.quantity;
+      document.getElementById("price").textContent = order.price;
+
+      const statusEl = document.getElementById("status");
+      statusEl.textContent = order.status;
+      statusEl.className = "status " + order.status;
+
+      card.style.display = "block";
+    }
+  </script>
+
+</body>
+</html>

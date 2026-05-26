@@ -9,4 +9,4 @@
 | 6  | Lenovo ThinkPad X1    | Laptop      | Lenovo    | Approx. $1399 | Intel Evo, 14-inch Display, Fingerprint    |
 | 7  | Bose QuietComfort 45  | Headphones  | Bose      | Approx. $329  | Active Noise Cancellation, Wireless Audio  |
 | 8  | Google Pixel 8        | Smartphone  | Google    | Approx. $699  | AI Camera, Tensor G3 Chip, Android 14      |
-+----+-----------------------+-------------+-----------+---------------+---------------------------------------------+
++----+-----------------------+-------------+-----------+---------------+---------------------------------------------+  
